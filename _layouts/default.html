@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body>
-  {{ content }}
+<body class="container grid-1280">
+  <div class="colmuns">
+    <div class="column">
+      <header class="navbar">
+        <section class="navbar-section">
+          <a href="#" class="navbar-brand mr-10">{{ site.title }}</a>
+          <a href="#" class="btn btn-link">Blog</a>
+        </section>
+        <section class="navbar-section">
+          <form class="input-group input-inline" method="get" action="{{ site.search_engine }}">
+            <input class="form-input" type="text" placeholder="Search" name="as_q">
+            <input type="hidden" name="as_sitesearch" value="{{ site.url | shorthand_url }}" >
+            <button type="submit" class="btn btn-primary input-group-btn">Search</button>
+          </form>
+        </section>
+      </header>
+    </div>
+  </div>
+  {{ content | replace: '<table>', '<table class="table table-striped">' | replace: '<pre class="highlight">', '<pre class="highlight code">' }}
+  <div class="columns">
+    <div class="column">
+      <footer class="text-center">
+        Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author }} {{ site.title }} 
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
