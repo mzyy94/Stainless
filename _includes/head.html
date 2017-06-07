@@ -11,5 +11,8 @@
 {% if file.extname == '.css' %}
   <link rel="stylesheet" href="{{ file.path | relative_url }}">
 {% endif %}
+{% if file.extname == '.js' %}
+  <script src="{{ file.path | relative_url }}"></script>
+{% endif %}
 {% endfor %}
 </head>
