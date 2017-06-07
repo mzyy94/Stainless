@@ -1,0 +1,28 @@
+<style>
+  .sticky-top-10 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+  }
+</style>
+<noscript>
+  <style>
+    .toc {
+      display: none;
+    }
+  </style>
+</noscript>
+<div class="panel mt-10 sticky-top-10 hide-sm toc">
+  <nav id="toc"></nav>
+</div>
+<script>
+  tocbot.init({
+    tocSelector: '#toc',
+    contentSelector: 'main article',
+    headingSelector: 'h1, h2, h3',
+    listClass: 'nav',
+    listItemClass: 'nav-item',
+    activeLinkClass: 'text-bold',
+  });
+
+</script>
