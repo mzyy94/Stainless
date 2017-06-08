@@ -1,4 +1,6 @@
 {% include sidebar/profile.html %}
 {% include sidebar/calendar.html %}
 {% include sidebar/recent.html %}
+{% if page.layout == "post" %}
 {% include sidebar/toc.html %}
+{% endif %}
