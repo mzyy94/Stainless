@@ -7,6 +7,9 @@ layout: default
     <header>
       <h1>{{ page.title }}</h1>
       <ul class="breadcrumb">
+        <li class="breadcrumb-item">
+          {{ page.date | date_to_string }}
+        </li>
         {% for category in page.categories %}
         <li class="breadcrumb-item">
           <a href="#">
@@ -14,9 +17,6 @@ layout: default
           </a>
         </li>
         {% endfor %}
-        <li class="breadcrumb-item">
-          {{ page.date }}
-        </li>
       </ul>
       <span class="tags">
         {% for tag in page.tags %}
