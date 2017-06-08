@@ -9,7 +9,7 @@ layout: default
       <div class="card">
         {% if post.image %}
         <div class="card-image">
-          <img src="{{ post.image }}" class="img-responsive" style="width: 100%">
+          <img src="{{ post.image }}" class="img-responsive">
         </div>
         {% endif %}
         <header class="card-header">
@@ -32,7 +32,7 @@ layout: default
     {% endfor %}
 
     {% if paginator.total_pages > 1 %}
-    <ul class="pagination" style="justify-content: center;">
+    <ul class="pagination">
       <li class="page-item">
         {% if paginator.previous_page %}
         <a href="{{paginator.previous_page_path | relative_url }}">Previous</a>
@@ -60,7 +60,7 @@ layout: default
     {% endif %}
 
   </main>
-  <div class="divider-vert hide-md" style="padding: 0"></div>
+  <div class="divider-vert hide-md padding-0"></div>
   <div class="column col-3 col-md-12">
     {% include sidebar.html %}
   </div>

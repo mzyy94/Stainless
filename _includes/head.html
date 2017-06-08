@@ -10,9 +10,14 @@
 {% assign asset_files = site.static_files | where: "assets", true %}
 {% for file in asset_files %}
 {% if file.extname == '.css' %}
+  {% if file.basename == 'noscript' %}
+  <noscript>
   <link rel="stylesheet" href="{{ file.path | relative_url }}">
-{% endif %}
-{% if file.extname == '.js' %}
+  </noscript>
+  {% else %}
+  <link rel="stylesheet" href="{{ file.path | relative_url }}">
+  {% endif %}
+{% elsif file.extname == '.js' %}
   <script src="{{ file.path | relative_url }}"></script>
 {% endif %}
 {% endfor %}
