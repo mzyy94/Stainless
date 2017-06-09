@@ -23,3 +23,7 @@ article img {
 .card-image img {
   width: 100%;
 }
+
+.parallax {
+  z-index: 10;
+}
