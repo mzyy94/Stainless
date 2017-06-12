@@ -5,6 +5,8 @@ layout: default
 <div class="columns">
   <main class="column col-9 col-md-12" lang="{{ site.lang }}">
     <header>
+      {% assign categories_page = site.html_pages | where: "id", "categories" | first %}
+      {% assign tags_page = site.html_pages | where: "id", "tags" | first %}
       <h1>{{ page.title }}</h1>
       {% if page.image %}
       <div class="parallax">
@@ -28,7 +30,7 @@ layout: default
         </li>
         {% for category in page.categories %}
         <li class="breadcrumb-item">
-          <a href="#">
+          <a href="{{ categories_page.url | relative_url }}">
             {{ category }}
           </a>
         </li>
@@ -36,7 +38,7 @@ layout: default
       </ul>
       <span class="tags">
         {% for tag in page.tags %}
-        <a class="label" href="#" hidefocus="true">{{ tag }}</a>
+        <a class="label" href="{{ tags_page.url | relative_url }}" hidefocus="true">{{ tag }}</a>
         {% endfor %}
       </span>
     </header>

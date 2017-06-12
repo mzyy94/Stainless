@@ -6,8 +6,28 @@
     <div class="column">
       <header class="navbar">
         <section class="navbar-section">
-          <a href="#" class="navbar-brand mr-10">{{ site.title }}</a>
-          <a href="#" class="btn btn-link">Blog</a>
+          <a href="{{ '/' | relative_url }}" class="navbar-brand mr-10">{{ site.title }}</a>
+          {% for page in site.data.pages %}
+          {% if page.submenu %}
+          <div class="dropdown">
+            <div class="btn-group">
+          {% endif %}
+              <a href="{{ page.url }}" class="btn btn-link">{{ page.title }}</a>
+          {% if page.submenu %}
+              <a class="btn btn-link dropdown-toggle" tabindex="0"><i class="icon icon-caret"></i></a>
+              <ul class="menu">
+                {% for menu in page.submenu %}
+                <li class="menu-item">
+                  <a href="{{ menu.url }}">
+                    {{ menu.title }}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
         </section>
         <section class="navbar-section">
           <form class="input-group input-inline" method="get" action="{{ site.search_engine }}">
