@@ -6,21 +6,21 @@ layout: default
   <main class="column col-9 col-md-12" lang="{{ site.lang }}">
     {% for post in paginator.posts %}
     <section class="column">
-      <div class="card">
-        {% if post.image %}
-        <div class="card-image">
-          <img src="{{ post.image }}" class="img-responsive">
-        </div>
-        {% endif %}
+      <div class="card mt-10 mb-10">
         <header class="card-header">
           <h4 class="card-title text-bold"><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h4>
           <h6 class="card-subtitle">
-              {{ post.date | date_to_string }} / 
+              {{ post.date | date_to_string }} /
               {% for category in post.categories %}
               <a href="#">{{ category }}</a>
               {% endfor %}
           </h6>
         </header>
+        {% if post.image %}
+        <div class="card-image">
+          <img src="{{ post.image }}" class="img-responsive">
+        </div>
+        {% endif %}
         <article class="card-body">
           {{ post.excerpt }}
         </article>
