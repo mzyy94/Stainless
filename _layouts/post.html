@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="columns">
+<div class="columns mt-10">
   <main class="column col-9 col-md-12" lang="{{ site.lang }}">
     <header>
       {% assign categories_page = site.html_pages | where: "id", "categories" | first %}
       {% assign tags_page = site.html_pages | where: "id", "tags" | first %}
       <h1>{{ page.title }}</h1>
       {% if page.image %}
-      <div class="parallax">
+      <div class="parallax mt-10">
         <div class="parallax-top-left"></div>
         <div class="parallax-top-right"></div>
         <div class="parallax-bottom-left"></div>
