@@ -12,7 +12,10 @@
     </div>
     {% endfor %}
   </div>
+  {% assign archive_page = site.html_pages | where: "id", "archive" | first %}
+  {% if archive_page %}
   <div class="panel-footer">
-    <a href="#">More...</a>
+    <a href="{{ archive_page.url | relative_url }}">More...</a>
   </div>
+  {% endif %}
 </div>
