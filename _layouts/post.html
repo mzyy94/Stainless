@@ -47,18 +47,20 @@ layout: default
       {{ content }}
     </article>
 
+    {% if site.twitter_share_button %}
     <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-counter" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
-    <div class="g-plusone" data-size="medium"></div>
-    <div class="fb-like" data-href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
-    <!-- twitter -->
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <!-- hatena -->
+    {% endif %}
+    {% if site.hatena_bookmark_button %}
+    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-counter" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
     <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-    <!-- google plus -->
+    {% endif %}
+    {% if site.google_plus_button %}
+    <div class="g-plusone" data-size="medium"></div>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- facebook -->
+    {% endif %}
+    {% if site.facebook_like_button %}
+    <div class="fb-like" data-href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
@@ -66,8 +68,11 @@ layout: default
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <!-- pocket -->
+    {% endif %}
+    {% if site.pocket_save_button %}
+    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
     <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+    {% endif %}
 
     <div class="divider"></div>
     <ul class="pagination">
