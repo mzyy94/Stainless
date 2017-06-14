@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="columns">
-  <main class="column col-9 col-md-12" lang="{{ site.lang }}">
+  <main class="columns column col-9 col-md-12" lang="{{ site.lang }}">
     {% for post in paginator.posts %}
-    <section class="column">
+    <section class="column col-6 col-sm-12">
       <div class="card mt-10 mb-10">
         <header class="card-header">
           <h4 class="card-title text-bold"><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h4>
@@ -25,14 +25,14 @@ layout: default
           {{ post.excerpt }}
         </article>
         <footer class="card-footer text-right">
-          <a rel="full-article" href="{{ post.url | relative_url }}" class="btn btn-primary"><span>{{ site.excerpt_link | default: "More" }}</span></a>
+          <a rel="full-article" href="{{ post.url | relative_url }}" class="btn btn-primary"><span>{{ site.excerpt_link | default: "More" }}</span> <i class="icon icon-forward"></i></a>
         </footer>
       </div>
     </section>
     {% endfor %}
 
     {% if paginator.total_pages > 1 %}
-    <ul class="pagination">
+    <ul class="column col-12 pagination">
       <li class="page-item">
         {% if paginator.previous_page %}
         <a href="{{paginator.previous_page_path | relative_url }}">Previous</a>
