@@ -41,3 +41,15 @@ article img {
   align-items: center;
   justify-content: center;
 }
+
+[id^=___plusone] {
+  width:65px !important;
+}
+
+.fb_iframe_widget > span {
+  vertical-align: baseline !important;
+}
+
+.pocket-btn {
+  display: inline-block;
+}
