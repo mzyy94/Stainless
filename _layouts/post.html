@@ -88,13 +88,13 @@ layout: default
       </li>
       {% endif %}
     </ul>
-    {% if site.disqus %}
+    {% if site.disqus_short_name %}
     <div id="disqus_thread"></div>
     <script>
     (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
       var d = document, s = d.createElement('script');
 
-      s.src = 'https://{{ site.disqus }}.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+      s.src = 'https://{{ site.disqus_short_name }}.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
 
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
