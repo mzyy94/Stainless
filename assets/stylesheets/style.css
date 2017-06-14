@@ -28,6 +28,19 @@ article img {
   width: 100%;
 }
 
+.card-body h1, .card-body h2, .card-body h3, .card-body h4, .card-body h5, .card-body h6 {
+  font-size: 2rem;
+  margin: 0.5rem auto;
+}
+
+.card-body ol li, .card-body ul li {
+  margin-top: 0;
+}
+
+.card-body p {
+  line-height: normal;
+}
+
 .parallax {
   z-index: 10;
 }
