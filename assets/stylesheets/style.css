@@ -6,6 +6,10 @@ article img {
   max-width: 100%;
 }
 
+pre, pre code, pre code * {
+  font-family: "Lucida Console", Monaco, monospace !important;
+}
+
 .calendar {
   min-width: auto;
 }
