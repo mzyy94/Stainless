@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 article img {
   max-width: 100%;
 }
@@ -30,4 +34,10 @@ article img {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.flex.empty {
+  height: 80%;
+  align-items: center;
+  justify-content: center;
 }
