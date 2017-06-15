@@ -1,0 +1,120 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: https://mzyy94.com/
+baseurl: "/stainless"
+title: Stainless
+subtitle:
+description:
+author: mzyy94
+
+# ----------------------- #
+#     Link & Markdown     #
+# ----------------------- #
+
+baseurl: ""
+permalink: /blog/:year/:month/:day/:title/
+relative_permalinks: false
+aboutme:
+  url: https://github.com/mzyy94
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  enable_coderay: false
+  syntax_highlighter: rouge
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  footnote_nr:    1
+highlighter: rouge
+lsi: false
+
+# ----------------------- #
+#    Paginate & Excerpt   #
+# ----------------------- #
+
+paginate: 10
+paginate_path: "/blog/page/:num"
+excerpt_link: "Read more"
+excerpt_separator: "<!-- more -->"
+recent_posts: 5
+
+# ----------------------- #
+#      Locale & Date      #
+# ----------------------- #
+
+lang: ja
+date_format: "ordinal"
+timezone: Asia/Tokyo
+
+# ----------------------- #
+#  RSS & Search & Comment #
+# ----------------------- #
+
+search_engine: https://www.google.com/search
+feed:
+  path: /atom.xml
+# disqus_short_name: SHORT_NAME_HERE
+
+# ----------------------- #
+#        Generate         #
+# ----------------------- #
+
+exclude:
+  - README.md
+  - CNAME
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
+# ----------------------- #
+#        Defaults         #
+# ----------------------- #
+# for assets
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      assets: true
+
+# ----------------------- #
+#        SNS Share        #
+# ----------------------- #
+
+twitter_share_button: true
+hatena_bookmark_button: true
+google_plus_button: true
+facebook_like_button: true
+pocket_save_button: true
+
+# ----------------------- #
+#       Analytics         #
+# ----------------------- #
+
+# google_analytics_tracking_id: TRACKING_ID_HERE
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+gems:
+  - jekyll-avatar
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-default-layout
+  - jekyll-optional-front-matter
+  - jemoji
+
+# Mentions
+jekyll-mentions: https://twitter.com
+# Github repositories
+repository: mzyy94/stainless
+# SEO tag
+twitter:
+  username: mzyy94
